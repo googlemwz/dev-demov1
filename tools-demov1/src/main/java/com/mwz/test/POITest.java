@@ -59,6 +59,13 @@ public class POITest {
         }
     }
 
+    /**
+     * @Author wenzhong.ma
+     * @Description
+     * @Date 4:23 上午 2021/2/16
+     * @Param []
+     * @return void
+     **/
     public void createExcleFile4Cell(){
         try{
             HSSFWorkbook hssfWorkbook = new HSSFWorkbook();
@@ -72,6 +79,34 @@ public class POITest {
                 HSSFCell cell= row.createCell(i);
                 cell.setCellValue(titleHead[i]);
             }
+            hssfWorkbook.write(new FileOutputStream(new File(genDateFileName()+".xls")));
+
+        }catch (Exception e) {
+
+            e.printStackTrace();
+        }
+    }
+
+    public void createExcleFile4Cellvalue(){
+        try{
+            HSSFWorkbook hssfWorkbook = new HSSFWorkbook();
+            HSSFSheet hssfSheet1= hssfWorkbook.createSheet("poi文档创建测试目录1");
+
+
+            String titleHead[] = {"姓名","性别","手机号","住址","单位","紧急联系人","联系电话"};
+
+            HSSFRow row = hssfSheet1.createRow(0);
+            for (int i= 0;i<titleHead.length;i++){
+                HSSFCell cell= row.createCell(i);
+                cell.setCellValue(titleHead[i]);
+            }
+
+            row = hssfSheet1.createRow(0);
+            for (int i= 0;i<titleHead.length;i++){
+                HSSFCell cell= row.createCell(i);
+                cell.setCellValue(titleHead[i]);
+            }
+
             hssfWorkbook.write(new FileOutputStream(new File(genDateFileName()+".xls")));
 
         }catch (Exception e) {
