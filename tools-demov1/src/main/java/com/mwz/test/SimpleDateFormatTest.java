@@ -17,6 +17,8 @@ public class SimpleDateFormatTest {
     public static void main(String[] args) {
 
 
+        SimpleDateFormatTest t = new SimpleDateFormatTest();
+        t.createFile();
 
     }
 
