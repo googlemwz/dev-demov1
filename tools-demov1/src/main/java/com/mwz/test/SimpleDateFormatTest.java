@@ -190,26 +190,5 @@ public class SimpleDateFormatTest {
     }
 
     
-    
-    public void createNullFile(){
-        try{
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmSS");
-            String filePath  = sdf.format(new Date());
-            File file = new File(filePath+"/timefile.txt");
-         
-            if(!file.getParentFile().exists()){
-                System.out.println("-- start 创建目录");
-                file.getParentFile().mkdirs();
-            }
-
-            file.createNewFile();
-            
-        }catch ( Exception e){
-
-            e.printStackTrace();
-        }
-    }
-    
-    
 
 }
