@@ -92,5 +92,35 @@ public class SimpleDateFormatTest {
 
         }
     }
+    
+     public void createFilePath(String filePath){
+        try{
+
+            File file = new File(filePath+"/timefile.txt");
+            System.out.println("file.getParentFile():"+file.getParentFile());
+            System.out.println("file.getParentFile():"+file.getAbsolutePath());
+            System.out.println("file.getParentFile():"+file.getPath());
+            if(!file.getParentFile().exists()){
+                System.out.println("-- start 创建目录");
+                file.getParentFile().mkdirs();
+            }
+
+            file.createNewFile();
+            FileWriter fw = new FileWriter( new File(filePath+"/"+filePath+"_timefile.txt"));
+            BufferedWriter bw= new BufferedWriter( fw);
+            bw.write(filePath);
+
+            bw.flush();
+            bw.close();
+            fw.close();
+
+        }catch ( Exception e){
+
+            e.printStackTrace();
+        }finally {
+
+        }
+    }
+    
 
 }
