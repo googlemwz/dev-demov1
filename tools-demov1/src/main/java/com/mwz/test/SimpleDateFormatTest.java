@@ -15,6 +15,20 @@ import java.util.Date;
 public class SimpleDateFormatTest {
 
     public static void main(String[] args) {
+
+
+
+    }
+
+    /**
+     * @Author wenzhong.ma
+     * @Description 在指定目录创建文件，并写入内容
+     * @Date 11:36 上午 2021/2/16
+     * @Param []
+     * @return void
+     **/
+
+    public void createFile(){
         try{
             SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmSS");
             String filePath  = sdf.format(new Date());
@@ -34,11 +48,11 @@ public class SimpleDateFormatTest {
 
             bw.flush();
             bw.close();
-                fw.close();
+            fw.close();
 
         }catch ( Exception e){
 
+            e.printStackTrace();
         }
-
     }
 }
