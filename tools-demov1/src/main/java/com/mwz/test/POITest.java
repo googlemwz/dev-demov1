@@ -59,6 +59,20 @@ public class POITest {
         }
     }
 
+    public void createExcleFile1(){
+        try{
+            HSSFWorkbook hssfWorkbook = new HSSFWorkbook();
+            HSSFSheet hssfSheet1= hssfWorkbook.createSheet("poi文档创建测试目录1");
+            HSSFSheet hssfSheet2= hssfWorkbook.createSheet("poi文档创建测试目录2");
+            HSSFSheet hssfSheet3= hssfWorkbook.createSheet("poi文档创建测试目录3");
+            hssfWorkbook.write(new FileOutputStream(new File(genDateFileName()+".xls")));
+        }catch (Exception e) {
+
+            e.printStackTrace();
+        }
+    }
+
+
     /**
      * @Author wenzhong.ma
      * @Description
