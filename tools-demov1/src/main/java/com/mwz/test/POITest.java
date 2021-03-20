@@ -59,10 +59,7 @@ public class POITest {
         }
     }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> feature2
     public void createExcleFile1(){
         try{
             HSSFWorkbook hssfWorkbook = new HSSFWorkbook();
@@ -76,12 +73,6 @@ public class POITest {
         }
     }
 
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> feature2
     /**
      * @Author wenzhong.ma
      * @Description
